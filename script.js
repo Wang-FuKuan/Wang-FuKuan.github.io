@@ -20,14 +20,23 @@ function updateImages() {
 
     bottomImage.src = `images/scene${currentScene}/ours.png`;
     topImage.src = `images/scene${currentScene}/${currentMethod}.png`;
+
+    // 重新初始化 TwentyTwenty 插件
+    initializeTwentyTwenty();
 }
 
-// 初始化滑块功能
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.twentytwenty-container');
-    container.addEventListener('mousemove', (e) => {
-        const rect = container.getBoundingClientRect();
-        const offset = ((e.clientX - rect.left) / rect.width) * 100;
-        document.getElementById('topImage').style.clipPath = `inset(0 ${100 - offset}% 0 0)`;
+// 初始化 TwentyTwenty 滑块插件
+function initializeTwentyTwenty() {
+    $(".twentytwenty-container").twentytwenty({
+        default_offset_pct: 0.5, // 默认滑块位置
+        orientation: 'horizontal', // 滑块方向
+        before_label: 'Ours', // 左侧标签
+        after_label: 'Selected', // 右侧标签
+        no_overlay: false, // 显示左右标签
     });
+}
+
+// 页面加载完成后初始化插件
+document.addEventListener('DOMContentLoaded', () => {
+    initializeTwentyTwenty();
 });
