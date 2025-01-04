@@ -1,37 +1,103 @@
+/* 页面整体样式 */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
+/* 场景选择区域 */
+.scene-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.scene-selector button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
     text-align: center;
 }
 
-.scene-selector button,
+.scene-selector img.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.scene-selector button:hover img {
+    border-color: #007BFF;
+}
+
+/* 图像展示和方法选择区域容器 */
+.display-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* 图像展示区域 */
+.twentytwenty-container {
+    width: 70vw; /* 宽度占屏幕 70% */
+    height: 60vh; /* 高度占屏幕 60% */
+    max-width: 800px; /* 最大宽度 */
+    max-height: 600px; /* 最大高度 */
+    border: 2px solid #ffbf00;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* 方法选择按钮区域 */
+.method-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .method-selector button {
-    margin: 5px;
     padding: 10px 15px;
     border: none;
     background-color: #007BFF;
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    text-align: left;
+    font-size: 14px;
 }
 
-.scene-selector button:hover,
 .method-selector button:hover {
     background-color: #0056b3;
 }
 
-.twentytwenty-container {
-    margin: 20px auto;
-    width: 100%;
-    max-width: 600px;
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .twentytwenty-container {
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .method-selector {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .method-selector button {
+        width: 100px;
+        text-align: center;
+    }
 }
