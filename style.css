@@ -17,7 +17,7 @@ body {
 .scene-selector button,
 .method-selector button {
     margin: 5px;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
     background-color: #007BFF;
     color: white;
@@ -34,12 +34,14 @@ body {
     position: relative;
     width: 100%;
     max-width: 600px;
+    height: 400px;
     overflow: hidden;
     margin: 20px auto;
 }
 
 .twentytwenty-container img {
     width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -47,4 +49,5 @@ body {
 
 #rightImage {
     clip-path: inset(0 50% 0 0);
+    transition: clip-path 0.2s ease-in-out;
 }
