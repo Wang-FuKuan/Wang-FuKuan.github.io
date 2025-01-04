@@ -18,8 +18,9 @@ function updateImages() {
     const bottomImage = document.getElementById('bottomImage');
     const topImage = document.getElementById('topImage');
 
-    bottomImage.src = images/scene${currentScene}/ours.png;
-    topImage.src = images/scene${currentScene}/${currentMethod}.png;
+    // 修复图像路径模板
+    bottomImage.src = `images/scene${currentScene}/ours.png`;
+    topImage.src = `images/scene${currentScene}/${currentMethod}.png`;
 
     initializeTwentyTwenty(); // 初始化 TwentyTwenty 插件
 }
@@ -28,11 +29,11 @@ function updateImages() {
 function initializeTwentyTwenty() {
     if ($.fn.twentytwenty) {
         $(".twentytwenty-container").twentytwenty({
-            default_offset_pct: 0.5,
-            orientation: 'horizontal',
-            before_label: 'Ours',
-            after_label: 'Selected',
-            no_overlay: false,
+            default_offset_pct: 0.5, // 滑块默认位置
+            orientation: 'horizontal', // 水平滑动
+            before_label: 'Ours', // 左侧标签
+            after_label: 'Selected', // 右侧标签
+            no_overlay: false, // 隐藏叠加文本
         });
     } else {
         console.error("TwentyTwenty plugin is not loaded.");
@@ -41,5 +42,5 @@ function initializeTwentyTwenty() {
 
 // 页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', () => {
-    adjustDisplayContainer(); // 初始化展示区域高度
+    updateImages(); // 加载默认图像
 });
