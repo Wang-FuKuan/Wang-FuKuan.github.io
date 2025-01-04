@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Restoration Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 场景选择 -->
+        <div class="scene-selector">
+            <button onclick="changeScene(1)">scene#1</button>
+            <button onclick="changeScene(2)">scene#2</button>
+            <button onclick="changeScene(3)">scene#3</button>
+            <!-- Add more buttons as needed -->
+        </div>
+
+        <!-- 图像对比 -->
+        <div class="twentytwenty-container">
+            <img id="leftImage" src="images/scene1/input.png" alt="Underwater">
+            <img id="rightImage" src="images/scene1/osmosis.png" alt="Restored">
+        </div>
+
+        <!-- 方法选择 -->
+        <div class="method-selector">
+            <button onclick="changeMethod('input')">1. Underwater</button>
+            <button onclick="changeMethod('contrast_stretch')">2. Contrast Stretch</button>
+            <button onclick="changeMethod('GDCP')">3. GDCP</button>
+            <button onclick="changeMethod('Ucolor')">4. Ucolor</button>
+            <button onclick="changeMethod('CWR')">5. CWR</button>
+            <button onclick="changeMethod('Semi-UIR')">6. Semi-UIR</button>
+            <button onclick="changeMethod('DM')">7. DM</button>
+            <button onclick="changeMethod('osmosis')">8. Osmosis</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
