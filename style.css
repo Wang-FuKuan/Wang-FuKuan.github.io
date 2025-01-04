@@ -50,15 +50,15 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
-    width: 1000px; /* 固定宽度 */
-    height: 1000px; /* 固定高度 */
+    width: 1000px; /* 展示区域宽度与场景选择区域一致 */
+    height: auto; /* 高度自动适配 */
 }
 
 /* 图像展示区域 */
 .twentytwenty-container {
     flex: 4; /* 主区域占比 */
-    width: 800px; /* 固定宽度 */
-    height: 800px; /* 固定高度 */
+    width: 100%; /* 宽度与父容器一致 */
+    height: auto; /* 高度自动调整 */
     border: 2px solid #ffbf00;
     border-radius: 10px;
     overflow: hidden;
@@ -66,8 +66,8 @@ body {
 
 /* 展示区域内的图像 */
 .twentytwenty-container img {
-    width: 800px; /* 图像宽度填充展示区域 */
-    height: 800px; /* 图像高度填充展示区域 */
+    width: 100%; /* 图像宽度填充展示区域 */
+    height: 100%; /* 图像高度填充展示区域 */
     object-fit: contain; /* 按比例缩放，完全展示内容 */
     position: absolute; /* 保证图像堆叠 */
     top: 0;
@@ -81,7 +81,7 @@ body {
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
-    height: 800px; /* 固定高度*/
+    height: auto; /* 高度自适应 */
     width: 200px; /* 固定宽度 */
 }
 
