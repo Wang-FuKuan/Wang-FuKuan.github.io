@@ -21,20 +21,7 @@ function updateImages() {
     bottomImage.src = images/scene${currentScene}/ours.png;
     topImage.src = images/scene${currentScene}/${currentMethod}.png;
 
-    // 调整展示区域高度
-    adjustDisplayContainer();
-}
-
-// 动态调整展示区域高度
-function adjustDisplayContainer() {
-    const inputImage = new Image();
-    inputImage.src = `images/scene${currentScene}/input.png`; // 使用当前场景的 input 图像
-    inputImage.onload = function () {
-        const aspectRatio = inputImage.width / inputImage.height; // 计算宽高比
-        const displayContainer = document.querySelector(".twentytwenty-container");
-        const newHeight = Math.round(displayContainer.offsetWidth / aspectRatio); // 根据宽高比计算高度
-        displayContainer.style.height = `${newHeight}px`; // 设置高度
-    };
+    initializeTwentyTwenty(); // 初始化 TwentyTwenty 插件
 }
 
 // 初始化 TwentyTwenty 滑块插件
@@ -55,5 +42,4 @@ function initializeTwentyTwenty() {
 // 页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', () => {
     adjustDisplayContainer(); // 初始化展示区域高度
-    initializeTwentyTwenty(); // 初始化 TwentyTwenty 插件
 });
