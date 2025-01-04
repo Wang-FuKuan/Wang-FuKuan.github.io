@@ -1,5 +1,5 @@
 let currentScene = 1;
-let currentMethod = 'osmosis';
+let currentMethod = 'input';
 
 // 更改场景
 function changeScene(sceneId) {
@@ -15,11 +15,11 @@ function changeMethod(method) {
 
 // 更新图像
 function updateImages() {
-    const leftImage = document.getElementById('leftImage');
-    const rightImage = document.getElementById('rightImage');
+    const bottomImage = document.getElementById('bottomImage');
+    const topImage = document.getElementById('topImage');
 
-    leftImage.src = `images/scene${currentScene}/input.png`;
-    rightImage.src = `images/scene${currentScene}/${currentMethod}.png`;
+    bottomImage.src = `images/scene${currentScene}/ours.png`;
+    topImage.src = `images/scene${currentScene}/${currentMethod}.png`;
 }
 
 // 初始化滑块功能
@@ -28,6 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     container.addEventListener('mousemove', (e) => {
         const rect = container.getBoundingClientRect();
         const offset = ((e.clientX - rect.left) / rect.width) * 100;
-        document.getElementById('rightImage').style.clipPath = `inset(0 ${100 - offset}% 0 0)`;
+        document.getElementById('topImage').style.clipPath = `inset(0 ${100 - offset}% 0 0)`;
     });
 });
