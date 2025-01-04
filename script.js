@@ -18,11 +18,25 @@ function updateImages() {
     const bottomImage = document.getElementById('bottomImage');
     const topImage = document.getElementById('topImage');
 
-    // 修复路径模板
-    bottomImage.src = `images/scene${currentScene}/ours.png`;
-    topImage.src = `images/scene${currentScene}/${currentMethod}.png`;
+    // 更新图像路径
+    const bottomImageSrc = `images/scene${currentScene}/ours.png`;
+    const topImageSrc = `images/scene${currentScene}/${currentMethod}.png`;
 
-    initializeTwentyTwenty(); // 初始化 TwentyTwenty 插件
+    bottomImage.src = bottomImageSrc;
+    topImage.src = topImageSrc;
+
+    // 强制设置图像大小为 800x800
+    bottomImage.onload = () => {
+        bottomImage.style.width = '800px';
+        bottomImage.style.height = '800px';
+    };
+    topImage.onload = () => {
+        topImage.style.width = '800px';
+        topImage.style.height = '800px';
+    };
+
+    // 初始化 TwentyTwenty 插件
+    initializeTwentyTwenty();
 }
 
 // 初始化 TwentyTwenty 滑块插件
