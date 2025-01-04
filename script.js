@@ -27,16 +27,19 @@ function updateImages() {
 
 // 初始化 TwentyTwenty 滑块插件
 function initializeTwentyTwenty() {
-    $(".twentytwenty-container").twentytwenty({
-        default_offset_pct: 0.5, // 默认滑块位置
-        orientation: 'horizontal', // 滑块方向
-        before_label: 'Ours', // 左侧标签
-        after_label: 'Selected', // 右侧标签
-        no_overlay: false, // 显示左右标签
-    });
+    if ($.fn.twentytwenty) {
+        $(".twentytwenty-container").twentytwenty({
+            default_offset_pct: 0.5,
+            orientation: 'horizontal',
+            before_label: 'Ours',
+            after_label: 'Selected',
+            no_overlay: false,
+        });
+    } else {
+        console.error("TwentyTwenty plugin is not loaded.");
+    }
 }
 
-// 页面加载完成后初始化插件
 document.addEventListener('DOMContentLoaded', () => {
     initializeTwentyTwenty();
 });
