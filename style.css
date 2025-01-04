@@ -7,14 +7,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh; /* 页面高度占满屏幕 */
 }
 
 /* 场景选择区域 */
 .scene-selector {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 20px;
+    width: 80%; /* 宽度占页面 80% */
 }
 
 .scene-selector button {
@@ -28,7 +30,7 @@ body {
 }
 
 .scene-selector img.thumbnail {
-    width: 15vw; /* 缩略图宽度为 15% 的屏幕宽度 */
+    width: 12%; /* 缩略图宽度占页面的 12% */
     height: auto; /* 高度自适应 */
     object-fit: cover;
     border: 1px solid #ccc;
@@ -44,18 +46,18 @@ body {
 .display-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
-    width: 90%; /* 最大宽度占屏幕 90% */
+    width: 80%; /* 展示区域占页面 80% 宽度 */
     max-width: 1200px;
+    height: calc(80vh - 80px); /* 高度动态适应屏幕，扣除场景选择的空间 */
 }
 
 /* 图像展示区域 */
 .twentytwenty-container {
-    flex: 3; /* 占主区域 */
-    width: 70%; /* 宽度占屏幕 70% */
-    height: 60vh; /* 高度占屏幕 60% */
-    max-height: 600px; /* 最大高度 */
+    flex: 4; /* 占主区域 */
+    width: 100%;
+    height: 100%;
     border: 2px solid #ffbf00;
     border-radius: 10px;
     overflow: hidden;
@@ -68,6 +70,7 @@ body {
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
+    height: 100%; /* 高度与展示区域保持一致 */
 }
 
 .method-selector button {
@@ -89,12 +92,12 @@ body {
 /* 响应式设计 */
 @media (max-width: 768px) {
     .scene-selector img.thumbnail {
-        width: 25vw; /* 缩略图宽度为屏幕 25% */
+        width: 18%; /* 小屏幕缩略图占页面 18% */
     }
 
     .twentytwenty-container {
-        width: 90%; /* 展示区域宽度占屏幕 90% */
-        height: 50vh; /* 高度占屏幕 50% */
+        width: 100%;
+        height: 60vh; /* 展示区域高度减少 */
     }
 
     .method-selector {
