@@ -52,12 +52,13 @@ body {
     gap: 20px;
     width: 1000px; /* 展示区域宽度与场景选择区域一致 */
     height: auto; /* 高度自动适配 */
+    position: relative;
 }
 
 /* 图像展示区域 */
 .twentytwenty-container {
     flex: 4; /* 主区域占比 */
-    width: 100%; /* 宽度与父容器一致 */
+    width: 800px; /* 宽度与父容器一致 */
     height: auto; /* 高度自动调整 */
     border: 2px solid #ffbf00;
     border-radius: 10px;
@@ -101,7 +102,7 @@ body {
     background-color: #0056b3;
 }
 
-/* 响应式设计（去除动态缩放，仅用于小屏幕适配） */
+/* 响应式设计 */
 @media (max-width: 768px) {
     .scene-selector {
         width: 100%; /* 小屏幕宽度填充 */
@@ -121,7 +122,7 @@ body {
 
     .twentytwenty-container {
         width: 90%; /* 占屏幕宽度 90% */
-        height: auto; /* 高度固定 */
+        height: auto; /* 高度自动调整 */
     }
 
     .method-selector {
