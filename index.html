@@ -11,18 +11,26 @@
     <div class="container">
         <!-- 场景选择 -->
         <div class="scene-selector">
-            <button onclick="changeScene(1)">scene#1</button>
-            <button onclick="changeScene(2)">scene#2</button>
-            <button onclick="changeScene(3)">scene#3</button>
+            <button onclick="changeScene(1)">
+                <img src="images/scene1/input.png" alt="Scene 1" class="thumbnail">
+                scene#1
+            </button>
+            <button onclick="changeScene(2)">
+                <img src="images/scene2/input.png" alt="Scene 2" class="thumbnail">
+                scene#2
+            </button>
+            <button onclick="changeScene(3)">
+                <img src="images/scene3/input.png" alt="Scene 3" class="thumbnail">
+                scene#3
+            </button>
         </div>
-
-        <!-- 图像对比 -->
+    </div>
+    
+    <div class="display-container">
         <div class="twentytwenty-container">
             <img id="bottomImage" src="images/scene1/ours.png" alt="Ours">
             <img id="topImage" src="images/scene1/input.png" alt="Input">
         </div>
-
-        <!-- 方法选择 -->
         <div class="method-selector">
             <button onclick="changeMethod('input')">1. Underwater</button>
             <button onclick="changeMethod('contrast_stretch')">2. Contrast Stretch</button>
@@ -34,6 +42,7 @@
             <button onclick="changeMethod('osmosis')">8. Osmosis</button>
         </div>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="support/jquery.event.move.js"></script>
