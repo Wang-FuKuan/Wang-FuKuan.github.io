@@ -22,7 +22,7 @@ function updateImages() {
     rightImage.src = `images/scene${currentScene}/${currentMethod}.png`;
 }
 
-// 初始化 TwentyTwenty 滑块
+// 初始化滑块功能
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.twentytwenty-container');
     container.addEventListener('mousemove', (e) => {
