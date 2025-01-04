@@ -18,7 +18,7 @@ function updateImages() {
     const bottomImage = document.getElementById('bottomImage');
     const topImage = document.getElementById('topImage');
 
-    // 修复图像路径模板
+    // 修复路径模板
     bottomImage.src = `images/scene${currentScene}/ours.png`;
     topImage.src = `images/scene${currentScene}/${currentMethod}.png`;
 
