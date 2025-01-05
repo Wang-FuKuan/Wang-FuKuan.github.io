@@ -1,0 +1,111 @@
+/* 页面整体样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 场景选择区域容器，允许滚动 */
+.scene-selector-container {
+    width: 1000px;
+    height: 200px; /* 设置高度，超出部分滚动显示 */
+    overflow-y: auto; /* 仅允许垂直滚动 */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 场景选择区域 */
+.scene-selector {
+    display: flex;
+    flex-wrap: wrap; /* 自动换行 */
+    gap: 10px; /* 缩略图间距 */
+    justify-content: center;
+}
+
+/* 场景按钮样式 */
+.scene-selector button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.scene-selector img.thumbnail {
+    width: 60px; /* 缩略图宽度 */
+    height: 60px; /* 缩略图高度 */
+    object-fit: cover; /* 保持图像比例 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.scene-selector button:hover img {
+    border-color: #007BFF; /* 鼠标悬停时高亮边框 */
+}
+
+/* 展示区域和方法选择 */
+.display-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 1000px;
+    height: 800px; /* 固定高度 */
+}
+
+/* 展示区域 */
+.twentytwenty-container {
+    width: 800px;
+    height: 800px;
+    border: 2px solid #ffbf00;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 展示区域的图像 */
+.twentytwenty-container img {
+    width: 800px;
+    height: 800px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 方法选择按钮区域 */
+.method-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    height: 800px; /* 固定高度 */
+    width: 200px; /* 固定宽度 */
+}
+
+.method-selector button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    width: 150px;
+}
+
+.method-selector button:hover {
+    background-color: #0056b3;
+}
