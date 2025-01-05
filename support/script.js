@@ -1,4 +1,4 @@
-let currentScene = 'val_0';
+let currentScene = 'UIEB_val_0';
 let currentMethod = 'input';
 
 // 初始化页面
@@ -39,7 +39,7 @@ function updateImages() {
     const bottomImage = document.getElementById('bottomImage');
     const topImage = document.getElementById('topImage');
 
-    bottomImage.src = `results/${currentScene}/ours.png`;
+    bottomImage.src = `results/${currentScene}/Ours.png`;
     topImage.src = `results/${currentScene}/${currentMethod}.png`;
 
     initializeTwentyTwenty();
