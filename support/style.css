@@ -16,7 +16,7 @@ body {
     width: 1000px;
     height: 200px; /* 设置高度，超出部分滚动显示 */
     overflow-y: auto; /* 仅允许垂直滚动 */
-    margin-bottom: 100px;/* 20仅允许垂直滚动 */
+    margin-bottom: 20px;/* 20仅允许垂直滚动 */
     border: 1px solid #ccc;
     padding: 10px;
     box-sizing: border-box;
