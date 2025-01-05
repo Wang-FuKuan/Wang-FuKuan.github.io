@@ -16,7 +16,7 @@ body {
     width: 1000px;
     height: 200px; /* 设置高度，超出部分滚动显示 */
     overflow-y: auto; /* 仅允许垂直滚动 */
-    margin-bottom: 20px;
+    margin-bottom: 100px;/* 20仅允许垂直滚动 */
     border: 1px solid #ccc;
     padding: 10px;
     box-sizing: border-box;
@@ -66,8 +66,8 @@ body {
 
 /* 展示区域 */
 .twentytwenty-container {
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
     border: 2px solid #ffbf00;
     border-radius: 10px;
     overflow: hidden;
@@ -76,8 +76,8 @@ body {
 
 /* 展示区域的图像 */
 .twentytwenty-container img {
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
     object-fit: cover;
     position: absolute;
     top: 0;
