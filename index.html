@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scene and Method Selector</title>
+    <link rel="stylesheet" href="support/style.css">
+</head>
+<body>
+    <!-- 场景选择区域 -->
+    <div class="scene-selector-container">
+        <div class="scene-selector" id="sceneSelector"></div>
+    </div>
+
+    <!-- 展示区域和方法选择 -->
+    <div class="display-container">
+        <!-- 图像展示区域 -->
+        <div class="twentytwenty-container">
+            <img id="bottomImage" src="images/UIEB_val_0/ours.png" alt="Bottom Image">
+            <img id="topImage" src="images/UIEB_val_0/input.png" alt="Top Image">
+        </div>
+
+        <!-- 方法选择按钮 -->
+        <div class="method-selector">
+            <button onclick="changeMethod('input')">Input</button>
+            <button onclick="changeMethod('1.IBLA')">1.IBLA</button>
+            <button onclick="changeMethod('2.UDCP')">2.UDCP</button>
+            <button onclick="changeMethod('3.ULAP')">3.ULAP</button>
+            <button onclick="changeMethod('4.CLAHE')">4.CLAHE</button>
+            <button onclick="changeMethod('5.SFGNet')">Method E</button>
+            <button onclick="changeMethod('6.U_shape')">6.U_shape</button>
+            <button onclick="changeMethod('7.DM_water')">7.DM_water</button>
+            <button onclick="changeMethod('8.PUIE_Net')">8.PUIE_Net</button>
+            <button onclick="changeMethod('9.USUIR')">9.USUIR</button>
+            <button onclick="changeMethod('10.Semi_UIR')">10.Semi_UIR</button>
+            <button onclick="changeMethod('11.HCLR')">11.HCLR</button>
+            <button onclick="changeMethod('12.GT')">12.GT</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.twentytwenty.js"></script>
+    <script src="support/script.js"></script>
+</body>
+</html>
